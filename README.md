@@ -35,3 +35,52 @@ Bestie, let's find your aesthetic! ✨ Take this quick quiz to discover your per
 ## 🚀 Get Started Bestie
 
 1. Grab the code:
+
+```bash
+git clone https://github.com/yourusername/vibe-check-bestie.git
+:
+bash
+npm install
+:
+bash
+npm run dev
+
+## 💅 The Stack
+
+- **Frontend:** React + TypeScript (for the smart girlies)
+- **Styling:** Tailwind CSS (slay every pixel)
+- **Animations:** Framer Motion (smooth like butter)
+- **UI Components:** shadcn/ui (aesthetic on point)
+- **Icons:** Lucide React (icons that understood the assignment)
+- **Build Tool:** Vite (because we're fast like that)
+
+## 🌟 The Looks
+
+<div align="center">
+<img src="path-to-screenshot1" width="400" alt="Quiz Preview" />
+<img src="path-to-screenshot2" width="400" alt="Results Preview" />
+</div>
+
+## 🤝 Spill the Tea
+
+Want to make it even better? Here's how:
+
+1. Fork it
+2. Create your vibe branch (`git checkout -b feature/NewVibe`)
+3. Commit your slays (`git commit -m 'Added new aesthetic'`)
+4. Push to the branch (`git push origin feature/NewVibe`)
+5. Start a pull request
+
+## 💖 Show Some Love
+
+If this project is giving what it's supposed to give, drop a ⭐️!
+
+## 📝 License
+
+Distributed under the MIT License. Check `LICENSE` for the deets.
+
+## 💫 Big Thanks To
+
+- [shadcn/ui](https://ui.shadcn.com/) for the clean components
+- [Lucide Icons](https://lucide.dev/) for the iconic moments
+- [Framer Motion](https://www.framer.com/motion/) for the smooth moves
