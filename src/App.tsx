@@ -17,6 +17,10 @@ function App() {
     wanderlust: 0,
   });
   const [result, setResult] = useState<Result | null>(null);
+  const [streak, setStreak] = useState(0);
+  const [bestStreak, setBestStreak] = useState(() => {
+    return parseInt(localStorage.getItem('bestStreak') || '0');
+  });
 
   const totalQuestions = questions.length;
   const progress = ((currentQuestion + 1) / totalQuestions) * 100;
@@ -34,6 +38,15 @@ function App() {
       const resultType = calculateResult(newPoints);
       setResult(results[resultType]);
     }
+
+    setStreak(prev => {
+      const newStreak = prev + 1;
+      if (newStreak > bestStreak) {
+        setBestStreak(newStreak);
+        localStorage.setItem('bestStreak', newStreak.toString());
+      }
+      return newStreak;
+    });
   };
 
   const resetQuiz = () => {
