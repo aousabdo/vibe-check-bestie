@@ -10,85 +10,145 @@ export const questions: Question[] = [
         id: 'photoshoot',
         text: 'Main character photoshoot in the city 📸',
         icon: Camera,
-        points: { glamorous: 5, minimalist: 0, artsy: 2, wanderlust: 1 }
+        points: { glamorous: 5, minimalist: 0, artsy: 1, wanderlust: 0 }
       },
       {
         id: 'cafe',
         text: 'Aesthetic café hopping with the girlies ☕️',
         icon: Coffee,
-        points: { glamorous: 2, minimalist: 3, artsy: 1, wanderlust: 2 }
+        points: { glamorous: 1, minimalist: 5, artsy: 1, wanderlust: 0 }
       },
       {
         id: 'festival',
         text: 'Festival vibes with cute fits 🎪',
         icon: Music,
-        points: { glamorous: 2, minimalist: 0, artsy: 5, wanderlust: 3 }
+        points: { glamorous: 1, minimalist: 0, artsy: 5, wanderlust: 1 }
       },
       {
-        id: 'spa',
-        text: 'Self-care Sunday at home 🛁',
-        icon: Home,
-        points: { glamorous: 1, minimalist: 4, artsy: 2, wanderlust: 0 }
+        id: 'adventure',
+        text: 'Spontaneous road trip with besties 🚗',
+        icon: Plane,
+        points: { glamorous: 0, minimalist: 0, artsy: 1, wanderlust: 5 }
       }
     ]
   },
   {
     id: 'aesthetic',
-    text: "💫 Pick your feed's main character moment 💫",
+    text: "💫 Your feed's main character moment? 💫",
     choices: [
       {
         id: 'minimal',
-        text: 'Clean girl aesthetic goals ✨',
+        text: 'Neutral fits + morning routine 🤍',
         icon: Waves,
-        points: { glamorous: 0, minimalist: 3, artsy: 1, wanderlust: 0 }
+        points: { glamorous: 0, minimalist: 5, artsy: 0, wanderlust: 0 }
       },
       {
         id: 'colorful',
-        text: 'Bold & extra (as you should) 💅',
+        text: 'Creative photoshoots + art vibes 🎨',
         icon: Palette,
-        points: { glamorous: 1, minimalist: 0, artsy: 3, wanderlust: 1 }
+        points: { glamorous: 0, minimalist: 0, artsy: 5, wanderlust: 1 }
       },
       {
         id: 'luxe',
-        text: 'That girl energy 👑',
+        text: 'Luxury lifestyle + glam moments 👑',
         icon: Sparkles,
-        points: { glamorous: 3, minimalist: 0, artsy: 0, wanderlust: 1 }
+        points: { glamorous: 5, minimalist: 1, artsy: 0, wanderlust: 0 }
       },
       {
-        id: 'nature',
-        text: 'Adventure baddie vibes 🌎',
-        icon: Sunset,
-        points: { glamorous: 0, minimalist: 1, artsy: 1, wanderlust: 3 }
+        id: 'travel',
+        text: 'Travel content + hidden gems 🌎',
+        icon: Plane,
+        points: { glamorous: 0, minimalist: 0, artsy: 1, wanderlust: 5 }
       }
     ]
   },
   {
     id: 'content',
-    text: '🎀 Your TikTok is giving... 🎀',
+    text: '🎀 Your TikTok is all about... 🎀',
     choices: [
       {
         id: 'beauty',
-        text: 'Get ready with me + hauls 💄',
+        text: 'Makeup transformations + GRWM 💄',
         icon: Gem,
-        points: { glamorous: 3, minimalist: 1, artsy: 0, wanderlust: 0 }
+        points: { glamorous: 5, minimalist: 0, artsy: 1, wanderlust: 0 }
       },
       {
-        id: 'travel',
-        text: 'Travel vlogs + hidden gems 🗺️',
-        icon: Plane,
-        points: { glamorous: 0, minimalist: 0, artsy: 1, wanderlust: 3 }
-      },
-      {
-        id: 'lifestyle',
-        text: 'Day in my life + routines ✌️',
+        id: 'minimal',
+        text: 'Minimalist routines + organization ✨',
         icon: Heart,
-        points: { glamorous: 1, minimalist: 3, artsy: 0, wanderlust: 0 }
+        points: { glamorous: 0, minimalist: 5, artsy: 0, wanderlust: 1 }
       },
       {
-        id: 'art',
-        text: 'Aesthetic inspo + DIYs 🎨',
-        icon: Flower2,
-        points: { glamorous: 0, minimalist: 0, artsy: 3, wanderlust: 1 }
+        id: 'creative',
+        text: 'DIY projects + aesthetic edits 🎨',
+        icon: Palette,
+        points: { glamorous: 0, minimalist: 0, artsy: 5, wanderlust: 0 }
+      },
+      {
+        id: 'explore',
+        text: 'Travel vlogs + adventure guides 🗺️',
+        icon: Plane,
+        points: { glamorous: 0, minimalist: 0, artsy: 0, wanderlust: 5 }
+      }
+    ]
+  },
+  {
+    id: 'morning',
+    text: "☀️ Your perfect morning routine?",
+    choices: [
+      {
+        id: 'glam',
+        text: 'Full glam + iced latte + selfies 💋',
+        icon: Sparkles,
+        points: { glamorous: 5, minimalist: 0, artsy: 0, wanderlust: 0 }
+      },
+      {
+        id: 'minimal',
+        text: 'Matcha + yoga + skincare ✨',
+        icon: Heart,
+        points: { glamorous: 0, minimalist: 5, artsy: 0, wanderlust: 1 }
+      },
+      {
+        id: 'creative',
+        text: 'Art journaling + vinyl + coffee 🎨',
+        icon: Palette,
+        points: { glamorous: 0, minimalist: 1, artsy: 5, wanderlust: 0 }
+      },
+      {
+        id: 'adventure',
+        text: 'Sunrise hikes + nature photos 🌅',
+        icon: Sunset,
+        points: { glamorous: 0, minimalist: 0, artsy: 1, wanderlust: 5 }
+      }
+    ]
+  },
+  {
+    id: 'style',
+    text: "👗 Your signature style?",
+    choices: [
+      {
+        id: 'luxe',
+        text: 'Designer pieces + trending fits 💅',
+        icon: Sparkles,
+        points: { glamorous: 5, minimalist: 0, artsy: 0, wanderlust: 0 }
+      },
+      {
+        id: 'capsule',
+        text: 'Capsule wardrobe + timeless basics 🤍',
+        icon: Waves,
+        points: { glamorous: 0, minimalist: 5, artsy: 0, wanderlust: 0 }
+      },
+      {
+        id: 'vintage',
+        text: 'Thrifted finds + unique pieces 🎭',
+        icon: Palette,
+        points: { glamorous: 0, minimalist: 0, artsy: 5, wanderlust: 1 }
+      },
+      {
+        id: 'comfy',
+        text: 'Adventure-ready + earth tones 🏔️',
+        icon: Plane,
+        points: { glamorous: 0, minimalist: 1, artsy: 0, wanderlust: 5 }
       }
     ]
   }
