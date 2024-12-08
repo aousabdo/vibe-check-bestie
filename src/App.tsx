@@ -6,6 +6,7 @@ import { ResultCard } from './components/ResultCard';
 import { Layout } from './components/Layout';
 import { calculateResult } from './lib/quiz-utils';
 import { AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -16,6 +17,9 @@ function App() {
     wanderlust: 0,
   });
   const [result, setResult] = useState<Result | null>(null);
+
+  const totalQuestions = questions.length;
+  const progress = ((currentQuestion + 1) / totalQuestions) * 100;
 
   const handleAnswer = (choice: Choice) => {
     const newPoints = { ...points };
@@ -47,11 +51,26 @@ function App() {
     <Layout showHeader={!result && currentQuestion === 0}>
       <AnimatePresence mode="wait">
         {!result ? (
-          <QuizCard
-            key={`question-${currentQuestion}`}
-            question={questions[currentQuestion]}
-            onAnswer={handleAnswer}
-          />
+          <>
+            <div className="w-full mb-8">
+              <div className="h-2 bg-pink-100 rounded-full overflow-hidden">
+                <motion.div 
+                  className="h-full bg-gradient-to-r from-pink-400 to-rose-400"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${progress}%` }}
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+              <p className="text-center mt-2 text-sm text-gray-500">
+                Question {currentQuestion + 1} of {totalQuestions}
+              </p>
+            </div>
+            <QuizCard
+              key={`question-${currentQuestion}`}
+              question={questions[currentQuestion]}
+              onAnswer={handleAnswer}
+            />
+          </>
         ) : (
           <ResultCard key="result" result={result} onReset={resetQuiz} />
         )}

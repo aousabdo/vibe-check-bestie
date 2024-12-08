@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import { Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -27,6 +28,23 @@ export function Layout({ children, showHeader = true, className }: LayoutProps) 
         )}
         <div className={cn("w-full max-w-2xl", className)}>
           {children}
+        </div>
+      </div>
+      <div className="mt-12 text-center">
+        <p className="text-sm text-gray-500">
+          Join <span className="font-semibold text-pink-500">10,000+</span> besties who found their vibe! 💅
+        </p>
+        <div className="flex justify-center gap-2 mt-2">
+          {['🦋', '✨', '💫', '💅', '👑'].map((emoji, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: i * 0.1 }}
+            >
+              {emoji}
+            </motion.span>
+          ))}
         </div>
       </div>
       <footer className="text-center py-4 text-sm text-gray-500">
