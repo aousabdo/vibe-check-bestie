@@ -10,25 +10,25 @@ export const questions: Question[] = [
         id: 'photoshoot',
         text: 'Main character photoshoot in the city 📸',
         icon: Camera,
-        points: { glamorous: 3, minimalist: 0, artsy: 1, wanderlust: 1 }
+        points: { glamorous: 5, minimalist: 0, artsy: 2, wanderlust: 1 }
       },
       {
         id: 'cafe',
         text: 'Aesthetic café hopping with the girlies ☕️',
         icon: Coffee,
-        points: { glamorous: 1, minimalist: 2, artsy: 1, wanderlust: 0 }
+        points: { glamorous: 2, minimalist: 3, artsy: 1, wanderlust: 2 }
       },
       {
         id: 'festival',
         text: 'Festival vibes with cute fits 🎪',
         icon: Music,
-        points: { glamorous: 1, minimalist: 0, artsy: 2, wanderlust: 2 }
+        points: { glamorous: 2, minimalist: 0, artsy: 5, wanderlust: 3 }
       },
       {
         id: 'spa',
         text: 'Self-care Sunday at home 🛁',
         icon: Home,
-        points: { glamorous: 1, minimalist: 3, artsy: 0, wanderlust: 0 }
+        points: { glamorous: 1, minimalist: 4, artsy: 2, wanderlust: 0 }
       }
     ]
   },

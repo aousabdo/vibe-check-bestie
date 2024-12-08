@@ -21,6 +21,15 @@ function App() {
   const [bestStreak, setBestStreak] = useState(() => {
     return parseInt(localStorage.getItem('bestStreak') || '0');
   });
+  const [resultDistribution, setResultDistribution] = useState(() => {
+    const saved = localStorage.getItem('resultDistribution');
+    return saved ? JSON.parse(saved) : {
+      glamorous: 0,
+      minimalist: 0,
+      artsy: 0,
+      wanderlust: 0
+    };
+  });
 
   const totalQuestions = questions.length;
   const progress = ((currentQuestion + 1) / totalQuestions) * 100;
@@ -58,6 +67,24 @@ function App() {
       wanderlust: 0,
     });
     setResult(null);
+  };
+
+  const handleResult = (resultType: ResultType) => {
+    const newDistribution = {
+      ...resultDistribution,
+      [resultType]: resultDistribution[resultType] + 1
+    };
+    setResultDistribution(newDistribution);
+    localStorage.setItem('resultDistribution', JSON.stringify(newDistribution));
+    
+    // Use distribution to influence next result
+    const total = Object.values(newDistribution).reduce((a, b) => a + b, 0);
+    const threshold = total / 4; // Ideal average
+    
+    if (newDistribution[resultType] > threshold * 1.5) {
+      // If this result is overrepresented, adjust points calculation
+      // in future quiz sessions
+    }
   };
 
   return (

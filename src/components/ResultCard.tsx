@@ -94,6 +94,11 @@ export function ResultCard({ result, onReset, className }: ResultCardProps) {
     }
   };
 
+  // Calculate rarity based on actual distribution
+  const distribution = JSON.parse(localStorage.getItem('resultDistribution') || '{}');
+  const total = Object.values(distribution).reduce((a: number, b: number) => a + b, 0);
+  const percentage = total ? Math.round((distribution[result.type] / total) * 100) : 25;
+
   return (
     <motion.div 
       initial={{ opacity: 0, scale: 0.9 }}
@@ -191,7 +196,7 @@ export function ResultCard({ result, onReset, className }: ResultCardProps) {
         
         <div className="flex flex-col items-center gap-2">
           <p className="text-sm text-gray-500">
-            🎯 Only {Math.floor(Math.random() * 15) + 10}% of quiz takers get this result!
+            🎯 Only {percentage}% of quiz takers get this result!
           </p>
           <div className="flex items-center gap-3">
             <span className="text-sm font-bold bg-white/95 text-rose-400 px-5 py-2.5 rounded-full shadow-lg">
